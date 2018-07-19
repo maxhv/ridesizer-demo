@@ -53,14 +53,14 @@ class PDFGenerator extends Component {
                                 <h3>Current bike</h3>                                                                                           
                                 <div>
                                     <span>Wheel:</span>
-                                    <span>{this.props.bike.wheel}"</span>
+                                    <span>{this.props.bike.wheel}</span>
                                 </div>
                                 <div>
                                     <span>Color:</span>
                                     <span>{this.props.bike.color}</span>
                                 </div>
                                 <h3>User info</h3>
-                                {formatDate(this.props.date).month !== 'undefined' && 
+                                {formatDate(this.props.date).month && 
                                     <div>
                                         <span>Birth month:</span>
                                         <span>{formatDate(this.props.date).month}</span>
