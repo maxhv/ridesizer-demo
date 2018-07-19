@@ -1,0 +1,130 @@
+.pdf {
+    &-print {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+
+        @media screen and (max-width: 767px) {
+            margin: 10px 0 0;
+            max-height: 100vh;
+            overflow: auto;
+        }
+
+        h2 {
+            color: #444;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 0 20px;
+            text-align: center;
+            width: 100%;
+
+            @media screen and (max-width: 767px) {
+                margin: 15px 0;
+            }
+        }
+
+        &-header {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 40px;
+            align-items: center;
+
+            img {
+                max-height: 40px;
+            }
+
+            h3 {
+                margin: 0;
+                color: green;
+                text-align: center;
+            }
+        }
+    }
+
+    &-container {
+        display: grid;
+        grid-template-columns: 260px auto;
+        width: 100%;
+        max-width: 98%;
+        color: #333;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+
+        h3 {
+            font-weight: 700;
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            border-bottom: 1px solid $color-primary;
+            margin: 10px 0;
+            padding: 0 0 10px;
+        }
+
+        &.estimated {
+            margin-top: 15px;
+
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+
+    &-reccomend {
+        border-radius: 5px;
+        text-align: left;
+        padding: 0 20px;
+        line-height: 2;
+
+        & > div {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 16px;
+
+            span:last-child {
+                color: #666;
+                font-weight: 300;
+                font-size: 15px;
+            }
+        }
+    }
+
+    &-image {
+        padding: 0 20px;
+        line-height: 2;
+        text-align: center;
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+
+        img {
+            max-height: 350px;
+            max-width: 350px;
+        }
+    }
+
+    &-confirm {
+        position: absolute;
+        top: 27px;
+        right: 30px;
+        margin: 0 20px 0 10px;
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            border-radius: 5px;
+        }
+
+        + h3 {
+            text-align: center;
+            color: green;
+            padding: 20px 0;
+            margin: 0 0 -60px;
+        }
+    }
+}

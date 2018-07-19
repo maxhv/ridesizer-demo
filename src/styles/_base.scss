@@ -1,0 +1,102 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    min-width: 320px;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    position: relative;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 6px;
+    text-align: center;
+    margin: 0 0 10px;
+    font-size: 32px;
+    z-index: 3;
+
+    @media screen and (max-width: 990px) {
+        margin: 0;
+        font-size: 32px;
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 5px 0 0;
+
+    @media screen and (max-width: 990px) {
+        grid-template-columns: 100%;
+        margin: 15px 0;
+    }
+}
+
+.button-primary {
+    background-color: transparent;
+    border: 1px solid #eee;
+    color: #666;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: all .4s;
+
+    &:hover {
+        border-color: $color-secondary;
+        transition: all .4s;
+    }
+}
+
+.button-secondary {
+    background-color: transparent;
+    border: 1px solid #eee;
+    color: #666;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: all .4s;
+    height: 48px;
+
+    &:hover {
+        border-color: $color-secondary;
+        transition: all .4s;
+    }
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:required {
+    box-shadow: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
