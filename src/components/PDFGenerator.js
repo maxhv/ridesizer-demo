@@ -4,7 +4,6 @@ import JSPDF from 'jspdf';
 
 import { showSubmitModal } from '../redux/actions/FlagActions';
 import formatDate from '../functions/formatDate';
-import formatRange from "../functions/formatRange";
 
 import Bike360 from "../classes/Bike360";
 
@@ -12,8 +11,6 @@ import { connect } from 'react-redux';
 
 import 'react-responsive-modal/lib/react-responsive-modal.css';
 import Modal from 'react-responsive-modal/lib/css';
-
-const inchToCmIndex = 2.54;
 
 class PDFGenerator extends Component {
     constructor(props) {
@@ -54,10 +51,6 @@ class PDFGenerator extends Component {
                         <div className="pdf-container">
                             <div className="pdf-reccomend">                              
                                 <h3>Current bike</h3>                                                                                           
-                                <div>
-                                    <span>Height:</span>
-                                    <span>{`${formatRange(this.props.unit, this.props.bike.height, inchToCmIndex)} ${this.props.unit}`}</span>
-                                </div> 
                                 <div>
                                     <span>Wheel:</span>
                                     <span>{this.props.bike.wheel}"</span>
